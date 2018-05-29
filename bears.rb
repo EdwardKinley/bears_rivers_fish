@@ -15,4 +15,12 @@ class Bear
     river.fish_in_river.delete(random_fish)
   end
 
+  def roar
+    return "Roar!"
+  end
+
+  def food_count
+    return @stomach_contents.count
+  end
+
 end

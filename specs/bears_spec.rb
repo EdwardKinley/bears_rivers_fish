@@ -27,4 +27,18 @@ class BearsTest < MiniTest::Test
     assert_equal(5, @amazon.fish_in_river.count)
   end
 
+  def test_bear_roar
+    assert_equal("Roar!", @yogi_bear.roar)
+  end
+
+  def test_food_count__0
+    assert_equal(0, @yogi_bear.food_count)
+  end
+
+  def test_food_count__2
+    @yogi_bear.takes_fish_from_river(@amazon)
+    @yogi_bear.takes_fish_from_river(@amazon)
+    assert_equal(2, @yogi_bear.food_count)
+  end
+
 end
